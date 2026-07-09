@@ -1,0 +1,62 @@
+[
+  {
+    "name": "codex",
+    "display_name": "Codex",
+    "description": "OpenAI Codex CLI — 代码生成与执行",
+    "role": "代码执行",
+    "type": "cli",
+    "cli_binary": "codex",
+    "args_template": "exec {prompt} --ephemeral --skip-git-repo-check -C {workspace}",
+    "workspace_dir": "/Users/icourt/Documents/Obsidian Vault/AI/mult-agent-bakgroud/mult-agent-backend/workspace/codex",
+    "timeout": 300,
+    "heartbeat_interval": 30,
+    "icon": "Code",
+    "color": "#3b82f6",
+    "enabled": true,
+    "strip_ansi": false
+  },
+  {
+    "name": "claude",
+    "display_name": "Claude",
+    "description": "Anthropic Claude CLI — 推理与代码专家",
+    "role": "推理专家",
+    "type": "cli",
+    "cli_binary": "claude",
+    "args_template": "-p {prompt} --bare --add-dir {workspace}",
+    "workspace_dir": "/Users/icourt/Documents/Obsidian Vault/AI/mult-agent-bakgroud/mult-agent-backend/workspace/claude",
+    "timeout": 300,
+    "heartbeat_interval": 30,
+    "icon": "Cpu",
+    "color": "#8b5cf6",
+    "enabled": true,
+    "strip_ansi": false
+  },
+  {
+    "name": "depk",
+    "display_name": "DepK",
+    "description": "DeepSeek CLI — 产品经理视角",
+    "role": "产品经理",
+    "type": "cli",
+    "cli_binary": "depk",
+    "args_template": "-p {prompt}",
+    "workspace_dir": "/Users/icourt/Documents/Obsidian Vault/AI/mult-agent-bakgroud/mult-agent-backend/workspace/depk",
+    "timeout": 300,
+    "heartbeat_interval": 30,
+    "icon": "Lightbulb",
+    "color": "#06b6d4",
+    "enabled": true,
+    "strip_ansi": true,
+    "use_pty": true,
+    "role_hint": "你是一名产品经理（Product Manager），负责从产品角度分析和规划。请以产品经理的视角思考问题，关注用户体验、功能优先级、市场需求和商业价值。\n\n"
+  },
+  {
+    "name": "tli",
+    "display_name": "TLI",
+    "description": "终端命令调度器 — 沙箱命令执行",
+    "role": "命令调度",
+    "type": "builtin",
+    "icon": "Terminal",
+    "color": "#f97316",
+    "enabled": true
+  }
+]
